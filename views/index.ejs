@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Landing Page">
+    <meta charset="UTF-8">
+    <meta name="author" content="Gustav Karlström">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingPage</title>
+    <link rel="stylesheet" href="css/landingPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="search">
+        <form method="get" action="https://duckduckgo.com/">
+            <input type="text" placeholder="Search" size="40" name="q">
+        </form>
+    </div>
+    <main class="container">
+        <div id="grid" class="grid">
+            <div id="addItem" class="gridItem"><i class="fa fa-plus"></i></div>
+        </div>
+    </main>
+    <!-- The Modal -->
+    <div id="bookmarkModal" class="modal">
+        <!-- Modal content -->
+        <div id="bookmarkModalContent" class="modalContent">
+            <button class="addBookmarkBtn">Add a bookmark</button>
+            <input name="url" method="post" id="bookmarkUrlSearch" placeholder="ex: google.com" type="text"><span><span id="status"></span></span>
+        </div>
+    </div>
+</body>
+
+</html>
