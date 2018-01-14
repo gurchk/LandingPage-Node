@@ -1,0 +1,30 @@
+{
+  "name": "landingpage-node",
+  "version": "1.0.0",
+  "description": "Landing page for me, myself and i",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurchk/LandingPage-Node.git"
+  },
+  "keywords": [
+    "Landing",
+    "page"
+  ],
+  "author": "Gustav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gurchk/LandingPage-Node/issues"
+  },
+  "homepage": "https://github.com/gurchk/LandingPage-Node#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
+  }
+}

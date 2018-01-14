@@ -32,6 +32,10 @@ h2 {
     display: block;
     position: relative; }
 
+span {
+  font-family: 'Oxygen', monospace;
+  font-size: 0.7em; }
+
 main {
   margin-top: 40px !important; }
   main .grid {
@@ -39,7 +43,8 @@ main {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 3em;
     grid-template-rows: repeat(1, 1fr);
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: center; }
     main .grid .gridItem {
       display: flex;
       align-items: center;
@@ -51,16 +56,14 @@ main {
       padding: 10px 20px; }
     main .grid .gridItem:last-child {
       background-color: transparent;
-      border: none; }
-    main .grid #addItem {
+      border: none;
       font-size: 5rem;
-      color: #999f97; }
-      main .grid #addItem .fa-plus {
+      color: #999f97;
+      transition: 0.4s; }
+      main .grid .gridItem:last-child:hover {
+        cursor: pointer;
+        color: #0A84FF;
         transition: 0.4s; }
-        main .grid #addItem .fa-plus:hover {
-          cursor: pointer;
-          color: #0A84FF;
-          transition: 0.4s; }
 
 input[type=text] {
   width: 100%;
@@ -127,5 +130,23 @@ input[type=text] {
   border: 1px solid #888;
   border-radius: 7px;
   display: inline-block; }
+
+.display {
+  display: block; }
+
+.m-auto {
+  margin: 0 auto; }
+
+.addBtn {
+  display: block;
+  padding: 10px;
+  border: transparent;
+  border-radius: 4px;
+  width: 100%;
+  font-family: monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 2em;
+  background-color: #92ff8c; }
 
 /*# sourceMappingURL=landingPage.css.map */
