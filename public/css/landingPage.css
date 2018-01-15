@@ -102,13 +102,23 @@ input[type=text] {
   background-color: #8effad;
   color: #000000;
   border-color: transparent !important;
-  box-shadow: none !important; }
+  box-shadow: none !important;
+  padding: 20px;
+  border: transparent;
+  border-radius: 4px;
+  font-size: 1.5em;
+  cursor: pointer; }
 
 .bad {
   background-color: #fe9393;
   color: #000000;
   border-color: transparent !important;
-  box-shadow: none !important; }
+  box-shadow: none !important;
+  padding: 20px;
+  border: transparent;
+  border-radius: 4px;
+  font-size: 1.5em;
+  cursor: pointer; }
 
 .modal {
   display: none;
@@ -125,7 +135,7 @@ input[type=text] {
 
 .modalContent {
   background-color: #fefefe;
-  margin: 5% auto;
+  margin: 16% auto;
   padding: 20px;
   border: 1px solid #888;
   border-radius: 7px;
@@ -148,5 +158,13 @@ input[type=text] {
   cursor: pointer;
   font-size: 2em;
   background-color: #92ff8c; }
+
+.topLeftInfo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  color: #999f97;
+  font-family: monospace;
+  font-size: 1em; }
 
 /*# sourceMappingURL=landingPage.css.map */

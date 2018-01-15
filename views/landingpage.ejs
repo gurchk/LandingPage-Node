@@ -15,12 +15,14 @@
 </head>
 
 <body>
+    <span class="topLeftInfo">Alt + click to delete...</span>
     <div class="search">
         <form method="get" action="https://duckduckgo.com/">
             <input type="text" placeholder="Search" size="40" name="q">
         </form>
     </div>
     <main class="container">
+
         <div id="grid" class="grid">
             <% for (let i=0; i < data.length; i++){ %>
                 <a href="http://<%= data[i].bookmarkInput %>" class="m-auto">
@@ -44,7 +46,7 @@
             </form>
         </div>
     </div>
-        <div id="bookmarkModal2" class="modal">
+    <div id="bookmarkModal2" class="modal">
         <!-- Modal content -->
         <div id="bookmarkModalContent2" class="modalContent">
             <button id="good" class="good">Delete..</button>
