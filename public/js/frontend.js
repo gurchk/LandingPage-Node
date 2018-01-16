@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         const bookmark = {
             bookmarkInput: url,
-            bookmarkImg: `https://logo.clearbit.com/${url}`,
+            bookmarkImg: `https://logo.clearbit.com/${url}?size=150`,
         };
         $.ajax({
             type: 'POST',
@@ -48,8 +48,9 @@ $(document).ready(function () {
     });
 
 
-    $('.gridItem').on('error', function (event) {
-        const link = $(this)[0].nextElementSibling.innerText; 
+    $('.gridImg').on('error', function (event) {
+        const link = $(this)[0].nextElementSibling.innerText;
+        $(this)[0].parentElement.setAttribute('class', 'p-11 m-auto gridItem');
         $(this).attr('src', `https://images.shrinktheweb.com/xino.php?stwembed=1&stwsize=200x&stwaccesskeyid=569284b70e7d17b&stwurl=${link}`);
     })
 

@@ -40,7 +40,7 @@ span {
 main {
     .grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 3em;
         grid-template-rows: repeat(1, 1fr);
         margin: 0 auto;
@@ -50,11 +50,16 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100px;
             background-color: $white;
             border: 1px solid $pleasantGrey;
             border-radius: 4px;
-            padding: 10px 20px;
+            padding: 0px 11px;
+            position: relative;
+            min-height: 100px;
+        }
+        .link {
+            position: absolute;
+            bottom: -20px;
         }
         .gridItem:last-child {
             background-color: transparent;
@@ -87,8 +92,9 @@ input[type=text] {
         box-shadow: 0 0 0 2px $blue;
     }
 }
-
-
+.gridImg {
+    min-height: 150px;
+}
 .addBookmarkBtn {
     background-color: transparent;
     border: none;
@@ -164,9 +170,7 @@ input[type=text] {
 .display {
     display: block;
 }
-.m-auto {
-    margin: 0 auto;
-}
+
 .addBtn {
     display: block;
     padding: 10px;
