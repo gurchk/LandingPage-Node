@@ -4,7 +4,6 @@ $(document).ready(function () {
     $('#addItem').on('click', function (event) {
         $('#bookmarkModal').fadeToggle("fast", "linear");
     })
-
     $('#search').on('submit', function () {
         const item = $('#search input');
         const url = item.val();
@@ -24,7 +23,7 @@ $(document).ready(function () {
         });
         return false;
     });
-    
+
     // Delete or keep handler 
     var idToDelete;
     $('#good').on('click', function (event) {
@@ -47,8 +46,11 @@ $(document).ready(function () {
             idToDelete = event.target.getAttribute('identifier');
         }
     });
+
+
     $('.gridItem').on('error', function (event) {
-        $(this).attr('src', 'img/noimg.png');
+        const link = $(this)[0].nextElementSibling.innerText; 
+        $(this).attr('src', `https://images.shrinktheweb.com/xino.php?stwembed=1&stwsize=200x&stwaccesskeyid=569284b70e7d17b&stwurl=${link}`);
     })
 
     // Alt handler 
@@ -62,6 +64,10 @@ $(document).ready(function () {
     });
 
     var altIsPressed = false;
+
+
+
+
     /*
     $( "p" ).click(function() {
       $( this ).slideUp();

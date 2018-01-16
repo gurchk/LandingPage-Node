@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta name="description" content="Landing Page">
@@ -22,16 +22,16 @@
         </form>
     </div>
     <main class="container">
-
         <div id="grid" class="grid">
             <% for (let i=0; i < data.length; i++){ %>
                 <a href="http://<%= data[i].bookmarkInput %>" class="m-auto">
                     <div>
                         <img identifier="<%= data[i].id %>" src="<%= data[i].bookmarkImg %>" class="gridItem">
-                        <span><%= 'www.' + data[i].bookmarkInput %></span>
+                        <span class="link"><%= 'www.' + data[i].bookmarkInput %></span>
                     </div>
 
                 </a>
+
                 <% } %>
                     <div id="addItem" class="gridItem"><i class="fa fa-plus"></i></div>
         </div>

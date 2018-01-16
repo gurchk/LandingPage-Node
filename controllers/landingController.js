@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bluebird = require('bluebird');
 const dbUser = "gpole";
 const dbPass = "gpole-server";
+
 // Body parser
 let urlencodedParser = bodyParser.urlencoded({
     extended: false
