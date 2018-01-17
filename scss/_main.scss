@@ -37,48 +37,53 @@ span {
     font-family: 'Oxygen', monospace;
     font-size: 0.7em;
 }
-
-main {
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 3em;
-        grid-template-rows: repeat(1, 1fr);
-        margin: 0 auto;
-        text-align: center;
-
-        .gridItem {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $white;
-            border: transparent;
-            border-radius: 4px;
-            position: relative;
-            box-shadow: 0 0 7px 4px $pleasantGrey;
-            -moz-box-shadow: 0 0 7px 4px $pleasantGrey;
-            -webkit-box-shadow: 0 0 7px 4px $pleasantGrey;
-        }
-        .link {
-            position: absolute;
-            bottom: -20px;
-        }
-        .gridItem:last-child {
-            background-color: transparent;
-            border: none;
-            font-size: 5rem;
-            color: $grey;
-            transition: 0.4s;
-            box-shadow: none;
-            &:hover {
-                cursor: pointer;
-                color: $blue;
-                transition: 0.4s;
-            }
-        }
-    }
+// Grid
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3em;
+    grid-template-rows: repeat(1, 1fr);
+    margin: 0 auto;
+    text-align: center;
     margin-top: 40px !important;
 }
+
+.gridItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    border: transparent;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 7px 4px $pleasantGrey;
+    -moz-box-shadow: 0 0 7px 4px $pleasantGrey;
+    -webkit-box-shadow: 0 0 7px 4px $pleasantGrey;
+    transition: 0.4s;
+    &:hover {
+        box-shadow: 0 0 2px 4px $blue;
+        -moz-box-shadow: 0 0 2px 4px $blue;
+        -webkit-box-shadow: 0 0 2px 4px $blue;
+        transition: 0.4s;
+    }
+    &:last-child {
+        background-color: transparent;
+        border: none;
+        font-size: 5rem;
+        color: $grey;
+        transition: 0.4s;
+        box-shadow: none;
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+            transition: 0.4s;
+        }
+    }
+    .link {
+        position: absolute;
+        bottom: -20px;
+    }
+} 
 
 // Random Classes
 input[type=text] {
@@ -123,9 +128,7 @@ input[type=text] {
     transition: 0.6s;
     cursor: pointer;
     margin-bottom: 20px;
-}
-
-// State classes
+} // State classes
 .good {
     background-color: $lightRed;
     color: $black;
@@ -157,9 +160,7 @@ input[type=text] {
     width: 260px;
     font-family: 'Oxygen', monospace;
 
-}
-
-// Modal
+} // Modal
 .modal {
     display: none;
     position: fixed;

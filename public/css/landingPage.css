@@ -58,40 +58,46 @@ span {
   font-family: 'Oxygen', monospace;
   font-size: 0.7em; }
 
-main {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3em;
+  grid-template-rows: repeat(1, 1fr);
+  margin: 0 auto;
+  text-align: center;
   margin-top: 40px !important; }
-  main .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 3em;
-    grid-template-rows: repeat(1, 1fr);
-    margin: 0 auto;
-    text-align: center; }
-    main .grid .gridItem {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #ffffff;
-      border: transparent;
-      border-radius: 4px;
-      position: relative;
-      box-shadow: 0 0 7px 4px #cccccc;
-      -moz-box-shadow: 0 0 7px 4px #cccccc;
-      -webkit-box-shadow: 0 0 7px 4px #cccccc; }
-    main .grid .link {
-      position: absolute;
-      bottom: -20px; }
-    main .grid .gridItem:last-child {
-      background-color: transparent;
-      border: none;
-      font-size: 5rem;
-      color: #999f97;
-      transition: 0.4s;
-      box-shadow: none; }
-      main .grid .gridItem:last-child:hover {
-        cursor: pointer;
-        color: #0A84FF;
-        transition: 0.4s; }
+
+.gridItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: transparent;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 0 7px 4px #cccccc;
+  -moz-box-shadow: 0 0 7px 4px #cccccc;
+  -webkit-box-shadow: 0 0 7px 4px #cccccc;
+  transition: 0.4s; }
+  .gridItem:hover {
+    box-shadow: 0 0 2px 4px #0A84FF;
+    -moz-box-shadow: 0 0 2px 4px #0A84FF;
+    -webkit-box-shadow: 0 0 2px 4px #0A84FF;
+    transition: 0.4s; }
+  .gridItem:last-child {
+    background-color: transparent;
+    border: none;
+    font-size: 5rem;
+    color: #999f97;
+    transition: 0.4s;
+    box-shadow: none; }
+    .gridItem:last-child:hover {
+      cursor: pointer;
+      color: #0A84FF;
+      transition: 0.4s; }
+  .gridItem .link {
+    position: absolute;
+    bottom: -20px; }
 
 input[type=text] {
   width: 100%;
