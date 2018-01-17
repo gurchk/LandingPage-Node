@@ -10,6 +10,22 @@
 .p-11 {
   padding: 11px !important; }
 
+.absoluteWrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px; }
+
+.times {
+  position: absolute;
+  right: 2px;
+  transition: 0.7s;
+  color: #999f97;
+  cursor: pointer; }
+  .times:hover {
+    color: #b53434;
+    transition: 0.7s; }
+
 * {
   box-sizing: border-box;
   outline: none; }
@@ -46,7 +62,7 @@ main {
   margin-top: 40px !important; }
   main .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 3em;
     grid-template-rows: repeat(1, 1fr);
     margin: 0 auto;
@@ -56,11 +72,12 @@ main {
       align-items: center;
       justify-content: center;
       background-color: #ffffff;
-      border: 1px solid #cccccc;
+      border: transparent;
       border-radius: 4px;
-      padding: 0px 11px;
       position: relative;
-      min-height: 100px; }
+      box-shadow: 0 0 7px 4px #cccccc;
+      -moz-box-shadow: 0 0 7px 4px #cccccc;
+      -webkit-box-shadow: 0 0 7px 4px #cccccc; }
     main .grid .link {
       position: absolute;
       bottom: -20px; }
@@ -69,7 +86,8 @@ main {
       border: none;
       font-size: 5rem;
       color: #999f97;
-      transition: 0.4s; }
+      transition: 0.4s;
+      box-shadow: none; }
       main .grid .gridItem:last-child:hover {
         cursor: pointer;
         color: #0A84FF;
@@ -89,7 +107,9 @@ input[type=text] {
     box-shadow: 0 0 0 2px #0A84FF; }
 
 .gridImg {
-  min-height: 150px; }
+  width: 128px;
+  border: transparent;
+  border-radius: 4px; }
 
 .addBookmarkBtn {
   background-color: transparent;
@@ -112,26 +132,33 @@ input[type=text] {
   margin-bottom: 20px; }
 
 .good {
-  background-color: #8effad;
-  color: #000000;
-  border-color: transparent !important;
-  box-shadow: none !important;
-  padding: 20px;
-  border: transparent;
-  border-radius: 4px;
-  font-size: 1.5em;
-  cursor: pointer; }
-
-.bad {
   background-color: #fe9393;
   color: #000000;
   border-color: transparent !important;
   box-shadow: none !important;
-  padding: 20px;
+  padding: 13px;
   border: transparent;
   border-radius: 4px;
   font-size: 1.5em;
-  cursor: pointer; }
+  cursor: pointer;
+  display: block;
+  width: 260px;
+  margin-bottom: 13px;
+  font-family: 'Oxygen', monospace; }
+
+.bad {
+  background-color: #8effad;
+  color: #000000;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  padding: 13px;
+  border: transparent;
+  border-radius: 4px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: block;
+  width: 260px;
+  font-family: 'Oxygen', monospace; }
 
 .modal {
   display: none;
@@ -152,7 +179,8 @@ input[type=text] {
   padding: 20px;
   border: 1px solid #888;
   border-radius: 7px;
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
 
 .display {
   display: block; }

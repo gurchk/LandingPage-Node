@@ -32,6 +32,7 @@ h2 {
     }
     margin-top: 80px;
 }
+
 span {
     font-family: 'Oxygen', monospace;
     font-size: 0.7em;
@@ -40,22 +41,23 @@ span {
 main {
     .grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 3em;
         grid-template-rows: repeat(1, 1fr);
         margin: 0 auto;
         text-align: center;
-        
+
         .gridItem {
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: $white;
-            border: 1px solid $pleasantGrey;
+            border: transparent;
             border-radius: 4px;
-            padding: 0px 11px;
             position: relative;
-            min-height: 100px;
+            box-shadow: 0 0 7px 4px $pleasantGrey;
+            -moz-box-shadow: 0 0 7px 4px $pleasantGrey;
+            -webkit-box-shadow: 0 0 7px 4px $pleasantGrey;
         }
         .link {
             position: absolute;
@@ -67,6 +69,7 @@ main {
             font-size: 5rem;
             color: $grey;
             transition: 0.4s;
+            box-shadow: none;
             &:hover {
                 cursor: pointer;
                 color: $blue;
@@ -92,9 +95,13 @@ input[type=text] {
         box-shadow: 0 0 0 2px $blue;
     }
 }
+
 .gridImg {
-    min-height: 150px;
+    width: 128px;
+    border: transparent;
+    border-radius: 4px;
 }
+
 .addBookmarkBtn {
     background-color: transparent;
     border: none;
@@ -120,27 +127,36 @@ input[type=text] {
 
 // State classes
 .good {
-    background-color: $lightGreen;
-    color: $black;
-    border-color: transparent !important;
-    box-shadow: none !important;
-    padding: 20px;
-    border: transparent;
-    border-radius: 4px;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-.bad {
     background-color: $lightRed;
     color: $black;
     border-color: transparent !important;
     box-shadow: none !important;
-    padding: 20px;
+    padding: 13px;
     border: transparent;
     border-radius: 4px;
     font-size: 1.5em;
     cursor: pointer;
+    display: block;
+    width: 260px;
+    margin-bottom: 13px;
+    font-family: 'Oxygen', monospace;
+
+}
+
+.bad {
+    background-color: $lightGreen;
+    color: $black;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    padding: 13px;
+    border: transparent;
+    border-radius: 4px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: block;
+    width: 260px;
+    font-family: 'Oxygen', monospace;
+
 }
 
 // Modal
@@ -165,6 +181,7 @@ input[type=text] {
     border: 1px solid #888;
     border-radius: 7px;
     display: inline-block;
+    position: relative;
 }
 
 .display {
@@ -183,6 +200,7 @@ input[type=text] {
     font-size: 2em;
     background-color: #92ff8c;
 }
+
 .topLeftInfo {
     position: absolute;
     left: 30px;

@@ -50,10 +50,13 @@ $(document).ready(function () {
 
     $('.gridImg').on('error', function (event) {
         const link = $(this)[0].nextElementSibling.innerText;
-        $(this)[0].parentElement.setAttribute('class', 'p-11 m-auto gridItem');
         $(this).attr('src', `https://images.shrinktheweb.com/xino.php?stwembed=1&stwsize=200x&stwaccesskeyid=569284b70e7d17b&stwurl=${link}`);
     })
-
+    // Times eventlistener
+    $('.times').on('click', function() {
+        console.log($('this'));
+        $('this')[0].parentElement.fadeToggle("fast", "linear");
+    })
     // Alt handler 
     $(document).keydown(function (event) {
         if (event.which == "18")

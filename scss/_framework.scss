@@ -13,3 +13,20 @@ $containerWidth: 80%;
 .p-11 {
     padding: 11px !important;
 }
+.absoluteWrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+.times {
+    position: absolute;
+    right: 2px;
+    transition: 0.7s;
+    color: #999f97;
+    cursor: pointer;
+    &:hover {
+        color: $red;
+        transition: 0.7s;
+    }
+}
