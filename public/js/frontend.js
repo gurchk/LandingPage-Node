@@ -54,8 +54,9 @@ $(document).ready(function () {
     })
     // Times eventlistener
     $('.times').on('click', function() {
-        console.log($('this'));
-        $('this')[0].parentElement.fadeToggle("fast", "linear");
+        if($('.modal').is(':visible')){
+            $('.modal:visible').fadeToggle("fast", "linear");
+        }
     })
     // Alt handler 
     $(document).keydown(function (event) {
